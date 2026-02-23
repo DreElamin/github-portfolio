@@ -344,7 +344,7 @@ function HomePage({ onNavigate }) {
   }, [])
 
   return (
-    <div className="page-enter min-h-screen flex flex-col items-center justify-center px-6 text-center relative z-20">
+    <div className="page-enter min-h-screen flex flex-col items-center justify-center px-6 text-center relative z-20 pt-20 md:pt-0">
       {/* Greeting */}
       <p className="blur-in text-purple-400 font-medium text-lg mb-4 tracking-widest uppercase">
         Hey there, I&apos;m
@@ -405,20 +405,20 @@ function HomePage({ onNavigate }) {
         <FavoritesCard
           icon="🎵"
           label="On Repeat"
-          value="Your Song Here"
-          sublabel="Artist Name"
+          value="Let Me Love You"
+          sublabel="Mario"
         />
         <FavoritesCard
           icon="📺"
           label="Watching"
-          value="Your Show Here"
-          sublabel="Season TBD"
+          value="Jujutsu Kaisen"
+          sublabel="Currently airing"
         />
         <FavoritesCard
           icon="🎬"
           label="Fav Anime"
-          value="Your Anime Here"
-          sublabel="Genre"
+          value="Naruto"
+          sublabel="Classic"
         />
         <FavoritesCard
           icon="📍"
@@ -428,16 +428,6 @@ function HomePage({ onNavigate }) {
         />
       </div>
 
-      {/* Scroll hint */}
-      <div
-        className="blur-in absolute bottom-8 flex flex-col items-center gap-2"
-        style={{ animationDelay: '1.2s' }}
-      >
-        <span className="text-gray-600 text-xs tracking-widest uppercase">
-          Scroll
-        </span>
-        <div className="w-0.5 h-8 bg-gradient-to-b from-purple-600 to-transparent" />
-      </div>
     </div>
   )
 }
@@ -521,20 +511,20 @@ function AboutPage() {
           <div className="space-y-8">
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p className="text-lg">
-                I&apos;m Elamin — a Data Science and Computer Science student at
+                I&apos;m Elamin, a Data Science and Computer Science student at
                 Emory University with a genuine love for building things that
-                matter. Whether that&apos;s a machine learning pipeline, a
-                full-stack app, or a meaningful story on stage, I bring the same
-                energy: all in.
+                matter and telling stories worth telling.
               </p>
               <p>
-                My work lives at the intersection of technology and human
-                experience. I&apos;ve explored AI-driven nutrition tracking,
-                predicted food bank demand with neural networks, and am
-                currently building{' '}
-                <span className="text-purple-400 font-medium">Strides</span> —
-                a gamified exploration app that turns your city into an
-                adventure.
+                Growing up in Sudan, where access to technology wasn&apos;t
+                always guaranteed, shaped the way I see the internet and data.
+                I&apos;m especially interested in building tools that make
+                technology more accessible, meaningful, and empowering.
+              </p>
+              <p>
+                I also grew up in the UAE, which gave me an international lens
+                and the ability to see the world through different cultural
+                perspectives.
               </p>
             </div>
 
@@ -549,25 +539,58 @@ function AboutPage() {
               <p className="text-gray-400 text-sm leading-relaxed">
                 Theater has shaped how I think about communication, empathy, and
                 collaboration. From acting to directing, it&apos;s taught me
-                that the best technology — like the best performance — is
+                that the best technology, like the best performance, is
                 invisible: it just works, and it moves people.
               </p>
             </SpotlightCard>
 
-            {/* Emory for Sudan */}
+            {/* Extracurricular Involvements */}
             <SpotlightCard
               className="p-6"
               spotlightColor="rgba(139, 92, 246, 0.1)"
             >
-              <h3 className="text-purple-400 font-bold text-lg mb-3 flex items-center gap-2">
-                🇸🇩 Emory for Sudan
+              <h3 className="text-purple-400 font-bold text-lg mb-4 flex items-center gap-2">
+                🎯 Extracurricular Involvements
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                As co-founder of Emory for Sudan, I work to raise awareness and
-                support for those affected by the ongoing crisis in Sudan.
-                My heritage isn&apos;t just where I&apos;m from — it&apos;s
-                part of why I build.
-              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-500 mt-0.5 shrink-0">▸</span>
+                  <div>
+                    <p className="text-white text-sm font-semibold">
+                      Emory for Sudan, Co-Founder
+                    </p>
+                    <p className="text-gray-400 text-xs leading-relaxed mt-0.5">
+                      Raising awareness and support for those affected by the
+                      ongoing crisis in Sudan. My heritage is part of why I
+                      build.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-500 mt-0.5 shrink-0">▸</span>
+                  <div>
+                    <p className="text-white text-sm font-semibold">
+                      Muslim Student Association, Treasurer
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-500 mt-0.5 shrink-0">▸</span>
+                  <div>
+                    <p className="text-white text-sm font-semibold">
+                      Residential Advisor
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-500 mt-0.5 shrink-0">▸</span>
+                  <div>
+                    <p className="text-white text-sm font-semibold">
+                      Theater Emory
+                    </p>
+                  </div>
+                </div>
+              </div>
             </SpotlightCard>
 
             {/* Fun facts */}
